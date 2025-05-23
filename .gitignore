@@ -3,10 +3,10 @@
 
 # CMake files
 *.cmake
-CMakeFiles/
-CMakeCache.txt
-build/*
-!build/Makefile
+*CMakeFiles/
+*CMakeCache.txt
+*build/*
+!*build/Makefile
 
 # Object files
 *.o
@@ -48,6 +48,7 @@ build/*
 *.su
 *.idb
 *.pdb
+*.vscode
 
 # Kernel Module Compile Results
 *.mod*

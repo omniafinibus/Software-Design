@@ -1,0 +1,7 @@
+# CMake files
+*.cmake
+*CMakeFiles/
+*CMakeCache.txt
+*assignment
+*build/*
+!build/Makefile
