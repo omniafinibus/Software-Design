@@ -4,15 +4,17 @@ using namespace std;
 
 int main()
 {
-	cout << "My name is Arjan Lemmens\n";
+	string name = "Arjan Lemmens";
+	int nameLength = name.length();
+	int position = -1;
+
+	cout << "My name is " << name << "\n";
+	cout << "My initials are: ";
+
+	do{
+		cout << name.c_str()[++position] << ". ";
+		position = name.find(" ", position);
+	} while(position != string::npos && position < nameLength);
+
 	cout << "\n";
-	cout << "**            *\n";
-	cout << "* *           *\n";
-	cout << "*  *          *\n";
-	cout << "*   *         *\n";
-	cout << "******        *\n";
-	cout << "*     *       *\n";
-	cout << "*      *      *\n";
-	cout << "*       *  *  ***********\n";
-	system("pause");
 }
