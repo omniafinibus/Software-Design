@@ -1,6 +1,12 @@
 # Prerequisites
 *.d
 
+# CMake files
+*.cmake
+CMakeFiles/
+CMakeCache.txt
+build/Makefile
+
 # Object files
 *.o
 *.ko
@@ -50,3 +56,6 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Documentation
+.pdf

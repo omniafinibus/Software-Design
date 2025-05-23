@@ -9,5 +9,4 @@ int main()
 	cout << "I just moved too Eindhoven\n";
 	cout << "\n";
 	cout << "Th- th- th- that's all folks\n";
-	system("pause");
 }
