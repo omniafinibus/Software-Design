@@ -5,7 +5,8 @@
 *.cmake
 CMakeFiles/
 CMakeCache.txt
-build/Makefile
+build/*
+!build/Makefile
 
 # Object files
 *.o
