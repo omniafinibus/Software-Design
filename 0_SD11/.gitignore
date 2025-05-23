@@ -2,6 +2,6 @@
 *.cmake
 *CMakeFiles/
 *CMakeCache.txt
+*Makefile
 *assignment
-*build/*
-!build/Makefile
+*build*
