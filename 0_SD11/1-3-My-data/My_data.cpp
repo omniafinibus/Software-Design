@@ -4,13 +4,13 @@ using namespace std;
 
 int main()
 {
-	int name, age, pin;
-	cout << "Please enter your weight: ";
+	string name;
+	int age, pin;
+	cout << "Please enter your name: ";
 	cin >> name;
 	cout << "Please enter your age: ";
 	cin >> age;
 	cout << "Please enter your pincode: ";
 	cin >> pin;
-	cout << "Your name is " << name << ", your age is " << age << ", and your pin is " << pin << ", and you're very gullable.\n";
-	system("pause");
+	cout << "Your name is " << name << ", your age is " << age << ", and your pin is " << pin << "\n";
 }
