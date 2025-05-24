@@ -13,11 +13,10 @@ int main()
 	cin >> radius;
 
 	//use radius too calculate area, diameter and circumference
-	diameter = 2 * radius;
+	diameter = 2.0 * radius;
 	area = pi * radius * radius;
-	circum = 2 * radius * pi;
+	circum = 2.0 * radius * pi;
 
 	//display area, diameter and circumference
 	cout << "The diameter= " << diameter << "m, the area= " << area << "m and the circumference= " << circum << "m.\n";
-	system("pause");
 }
