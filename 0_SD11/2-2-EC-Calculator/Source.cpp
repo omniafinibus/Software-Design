@@ -22,7 +22,7 @@ int main()
 
 	//Display EC's per S and total EC's
 	cout << "Your total amount of EC's= " << totEc << ". \n";
-	system("pause");
+
 
 
 }
