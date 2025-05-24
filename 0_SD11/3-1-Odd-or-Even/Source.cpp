@@ -12,15 +12,5 @@ int main()
 	cin >> enterNum;
 
 	//calculate the remainder after deviding by 2
-	remain = enterNum % 2;
-
-	//check if the remainder is equel to 1 or 0
-	if (remain == 1)
-		cout << "The number is odd.\n";
-
-	if (remain == 0)
-		cout << "The number is even.\n";
-
-	system("pause");
-	//inform user of outcome
+	cout << "The number is " << (enterNum % 2 ? "odd\n" : "even\n");
 }
