@@ -27,5 +27,5 @@ int main()
 	cout << "You have consumed " << totalCal << " Calories.\n";
 	cout << "You need too run " << runDistance << "km too burn these Calories.\n";
 
-	system("pause");
+
 }
