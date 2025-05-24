@@ -25,5 +25,5 @@ int main()
 	cout << "Point 2:  " << leftParen << x2 << comma << y2 << rightParen << "\n";
 	cout << "Midpoint: " << leftParen << xMid << comma << yMid << rightParen << "\n";
 
-	system("pause");
+
 }
