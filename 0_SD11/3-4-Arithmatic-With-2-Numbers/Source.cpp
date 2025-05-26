@@ -4,36 +4,35 @@ using namespace std;
 
 int main()
 {
-	int answer;
+	float answer;
 	int num1, num2;
-	char operat;
+	char op;
 
 	//ask for 2 values
-	cout << "Please enter 2 values with the required operator in between: ";	//cout << "Please enter 2 values: "
-	cin >> num1 >> operat >> num2;												//cin >> num1  >> num2;
-
-	//ask for a operator
-	//cout << "Please choose an operator: +, -, * or /. \n";
-	//
-	
-	cin >> operat;
+	cout << "Please enter 2 integers: ";
+	cin >> num1 >> num2;
+	//ask for a op
+	cout << "Please choose an op: +, -, * or /. \n";
+	cin >> op;
 	
 	//calculate outcome
-	if (operat == '+')
-	answer = num1 + num2;
-
-	else if (operat == '-')
-	answer = num1 - num2;
-
-	else if (operat == '*')
-	answer = num1 * num2;
-	
-	else if (operat == '/')
-	answer = num1 / num2;
+	switch (op)	{
+	case '+':
+		answer = num1 + num2;
+		break;
+	case '-':
+		answer = num1 - num2;
+		break;
+	case '*':
+		answer = num1 * num2;
+		break;
+	case '/':
+		answer = (float)num1 / (float)num2;
+		break;
+	default:
+		cout << "Error: operator not recognized";
+		break;
+	}
 	
 	cout << "The answer is " << answer << ".\n";
-	//show answer
-	
-
-	system("pause");
 }
