@@ -1,51 +1,44 @@
 #include <iostream>
+#include <algorithm>
+#include <vector>
 
 using namespace std;
 
 int main()
 {
+	vector<int> vLongMonths = {1, 3, 5, 7, 8, 10, 12};
+	vector<int> vShortMonths = {4, 6, 9, 11};
 	int month;
 	int amountDays;
 
 	//ask for month
 	cout << "Which month would you like to know the amount of days from?\n";
-	cout << "Type 1 for Januari, 2 for Februari, 3 for March etc.\n";
+	cout << "Type 1 for January, 2 for February, 3 for March etc.\n";
 	cin >> month; 
 	
 	//check which category amount days is
-	if (month == 2)
-	{
-		amountDays = 2829;
+	if (month == 2)	{
+		// Check if the year is a leap year
+		int year;
+		cout << "In which year?.\n";
+		cin >> year;
+		// February is 29 days long every 4 years unless the year is devisable by 100 and not 400
+		if (year % 4 || ((year/100) % 4)) {
+			amountDays = 28;
+		}
+		else {
+			amountDays = 29;
+		}
 	}
-	else if (month == 1 || month == 3 || month == 5 || month == 7 || month == 9 || month == 11)
-	{
+	else if (find(vLongMonths.begin(), vLongMonths.end(), month) != vLongMonths.end()) {
 		amountDays = 31;
 	}
-	else if (month == 4 || month == 6 || month == 8 || month == 10 || month == 12)
-	{
-		amountDays == 30;
+	else if (find(vShortMonths.begin(), vShortMonths.end(), month) != vShortMonths.end()) {
+		amountDays = 30;
 	}
-
-	//use switch too see which month is necessary
-	//output amount of days in a months
-	switch (month)
-	{
-	case 1:
-	case 3:
-	case 5:
-	case 7:
-
-		cout << "The number of days in this month is: 31.\n";
-		break;
-	case 30:
-		cout << "The number of days in this month is: 30.\n";
-		break;
-	case 2829:
-		cout << "The number of days in this month is: 28 or 29.\n";
-		break;
-	default:
-		cout << "You have entered a unusable number.\n";
+	else {
+		amountDays = -1;
 	}
-
-	system("pause");
+	
+	cout << "The number of days in this month is: " << amountDays << ".\n";
 }
