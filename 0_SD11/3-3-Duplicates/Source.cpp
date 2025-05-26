@@ -10,36 +10,13 @@ int main()
 	cin >> int1 >> int2 >> int3;
 
 	//check if it has a duplicate or if they are all 
-	if (int1 == int2 == int3)
-	{
+	if (int1 == int2 || int3 == int2 || int1 == int3) {
 		cout << "DUPLICATES\n";
 	}
-
-	else if (int1 == int2)
-	{
-		cout << "DUPLICATES\n";
-	}
-	
-	else if (int1 == int3)
-	{
-		cout << "DUPLICATES\n";
-	}
-
-	else if (int3 == int2)
-	{
-		cout << "DUPLICATES\n";
-	}
-
-	else if (int1 != int2 != int3)
-	{
+	else if (int1 != int2 != int3) {
 		cout << "UNIQUE\n";
 	}
-
-	else
-	{
+	else {
 		cout << "ERROR";
 	}
-
-	system("pause");
-
 }
