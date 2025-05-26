@@ -20,17 +20,18 @@ int main()
 	cout << "Your BMI is: " << bmi << ".\n";
 
 	//check if doctorate advise is required
-	if (bmi < 18.5)
-	cout << "Your BMI is extremely low, please contact your doctor for advice.\n";
-	
-	else if (bmi >= 18.5 && bmi < 25)
-	cout << "Your BMI is normal.\n";
+	cout << "Your BMI is ";
+	if (bmi < 18.5) {
+		cout << "extremely low, please contact your doctor for advice.\n";
+	}
+	else if (bmi < 25) {
+		cout << "normal.\n";
+	}
+	else if (bmi < 30){
+		cout << "higher than normal.\n";
+	}
+	else{
+		cout << "extremely high, please contact your doctor for advice.\n";
+	}
 
-	else if (bmi >= 25 && bmi < 30)
-	cout << "Your BMI is higher than normal.\n";
-
-	else if (bmi > 30)
-	cout << "Your BMI is extremely high, please contact your doctor for advice.\n";
-
-	system("pause");
 }
