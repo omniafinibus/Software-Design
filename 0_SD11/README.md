@@ -2,6 +2,15 @@
 This course was an introductory course to `C++` programming.
 For background the book Fundamentals of C++ was used: http://python.cs.southern.edu/cppbook/progcpp.pdf
 
+To run any of the assignments:
+```
+$ cd 0_SD11/N-N-Assignment-name/
+$ mkdir build
+$ cd build
+$ cmake ../
+$ cmake --build .
+$ ./assignment
+```
 
 ## Week 1 - The Basics
 ### Assignment 1.1: Hello Application
