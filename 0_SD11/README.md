@@ -156,7 +156,7 @@ A program asks the user to enter three integer values (e.g. 56, 30 and 45).
 Your program should compare these three integers, and display the value of the largest 
 (e.g. “The maximum value is 56.”).
 If all three numbers are equal, the program should display the message “All numbers are equal.”.
-Again, first provide the flow chart of the program and then implement the code!
+Again, first create the flow chart of the program and then implement the code!
 
 **Goal:** Practice using conditional statements and comparisons.
 
@@ -164,7 +164,7 @@ Again, first provide the flow chart of the program and then implement the code!
 ### Assignment 3.3: Duplicates (Exercise 5.20 from the book)
 A program requests three integer values from the user.
 It then displays one of two things: if any of the values entered are duplicates, it displays “DUPLICATES”; otherwise, it displays “ALL UNIQUE”.
-First provide the flow chart of the program and then implement the code.
+First Create the flow chart of the program and then implement the code.
 
 **Goal:** Practice checking for duplicates and logical conditions.
 
@@ -176,7 +176,7 @@ Depending on the operator the user enters, compute and display the result of the
 
 **Goal:** Practice using operators and user input for operations.
 
-## Week 4 - 
+## Week 4 - Introduction to more complex program structures
 ### Assignment 4.1: Body mass index
 Body mass index (BMI) is calculated based on the following formula:
 ```
@@ -256,3 +256,154 @@ Hint: you can make use of scientific notation also in C++, saving you a lot of c
 for this exercise. Have a look at Chapter 3 from the book to figure out how to do this!
 
 **Goal:** Using floating-point arithmetic with scientific notation, comparison operators, and constants to categorize data into predefined ranges
+
+## Week 5 - More on Loop Structures and Data Processing in C++
+
+### Assignment 5.1: Tabular output
+Consider a program that asks the user for a positive integer value. The program should then print a table like the one shown below (in this example, the user has entered value 20).
+- What kind of repetition will you use and why?
+- Create the flow chart of the program.
+- Write the program.
+
+Hint: use the tab escape sequence \t to format the output. For example, the string `N\tN*N\tN*N*N\tN*N*N*N` will display the header of the table shown below.
+
+|N|N^2|N^3|N^4|
+|--------|--------|--------|--------|
+|1|1|1|1|
+|2| 4| 8| 16|
+|3| 9| 27| 81|
+|…|…|…|…|
+|20| 400| 8000| 160000|
+
+**Goal:** Using for loops to generate rows and arithmetic operations to calculate powers.
+
+### Assignment 5.2: Sum of integers
+Consider a program that asks the user for an integer value greater than 10, say 15. The
+program should then calculate the sum of all positive values up to 15: `1 + 2 + 3 + … + 15`.
+- What kind of repetition will you use and why?
+- Create the flow chart of the program.
+- Write the program.
+
+**Goal:** Using for loops to accumulate sums, understanding loop variables, and practicing basic arithmetic.
+
+### Assignment 5.3: Advanced Sum of integers (extension of assignment 5.2)
+Adjust the flow chart and the program you wrote for assignment 5.2 in order to show the current sum after adding each number, so the mathematical steps taken per addition. 
+
+**Goal:** Using loop variables to track partial sums, printing intermediate results, and refining loop control for clarity.
+
+### Assignment 5.4: Reverse sum of integers
+Consider a program that asks the user for an integer value greater than 15, say 45. 
+The program should then calculate the int value n for which it holds that:
+
+1 + 2 + 3 + … + (n − 1) + n < 45
+
+and
+
+1 + 2 + 3 + … + (n − 1) + n + (n + 1) >= 45
+
+A possible result of your program could be something like:
+
+- What kind of repetition will you use and why?
+- Create the flow chart of the program.
+- Write the program.
+
+**Goal:** Using while loops with conditional checks to find the correct sum threshold, practicing loop exit conditions, and handling dynamic input.
+
+## Week 6 - Control Structures, Data Manipulation, and Algorithm Implementation
+
+### Assignment 6.1: Limited minimum and maximum
+The algorithm for finding the smallest (minimum) and largest (maximum) number is often used in programming.
+For example, a program that determines the winner and loser of a sales competition would input the number of products sold by each sales person.
+The person who sold the largest number of products wins the competition.
+The person who sold the smallest number of products loses the competition.
+The program should ask the user to input the amount of sold products of 3 sales agents.
+Next, the program should show which amount is the largest and which is the smallest.
+- Create the flow chart of this program.
+- Implement this program.
+Adjust the program you made in such a way that the user can enter as many sales agents as he/she wants.
+The user should indicate that all sales agents have been processed by entering a
+negative number.
+A possible result of your program could be something like:
+- What kind of repetition structure would you use? Explain why?
+- Create the flow chart of this extended program.
+- Implement the code.
+
+Optional: extend the program even further, such that not only the number of products sold is shown for the winner and loser, but also the number of the sales agent who is the winner and the number of the sales agent who is the loser.
+So for example:
+```
+Sales agent 2 is the loser and sold 4 products!
+Sales agent 4 is the winner and sold 15 products!
+```
+If the same number of sold products is entered for two sales agents, you can choose which one is the winner (you don’t need to take special care for this in your program).
+
+**Goal:** Using while loops to process dynamic user input, comparing values to track min/max, and optionally storing agent data in arrays/vectors
+
+### Assignment 6.2: Number Pi
+The German mathematician Leibniz (1646–1716) discovered the rather remarkable fact that the mathematical constant π can be computed using the following mathematical relationship:
+```
+pi()/4 = 1 − 1/3 + 1/5 − 1/7 + 1/9 − 1/11 //etc
+```
+
+The formula to the right of the equal sign represents an infinite series; each fraction represents a term in that series.
+If you start with 1, subtract one-third, add one-fifth, and so on, for each of the odd integers, you get a number that gets closer and closer to the value of 𝜋/4 as you go along.
+Design and write a program that calculates an approximation of 𝜋 consisting of the first 10,000 terms in Leibniz’ series.
+
+**Goal:** Implement a mathematical series using loops and floating-point arithmetic.
+
+### Assignment 6.3: Predator – prey
+In a predator-prey simulation, you compute the populations of predators and prey, using the following equations:
+```
+prey[n+1] = prey[n] * (1 + A − B * pred[n]);
+pred[n+1] = pred[n] * (1 − C + D * prey[n]);
+```
+Here, A is the rate at which prey birth exceeds natural death, B is the rate of predation, C is the rate at which predator deaths exceed births without food, and D represents predator increase in the presence of food.
+We will write a program that prompts users for these rates, the initial population sizes, and the number of periods the simulation should run.
+Then it should print the populations for the given number of periods.
+
+As inputs, try A = 0.1, B = C = 0.01, and D = 0.00002 with initial prey and predator populations of 1,000 and 20.
+
+- What kind of repetition structure would you use? Explain why?
+- Create the flow chart of this program.
+- Implement the code.
+
+**Goal:** Simulate dynamic population growth using mathematical equations and loops.
+
+### Assignment 6.4: Number guessing game
+We are going to make a game where the user has to guess a (random) number greater than or equal to 0 and less than 100.
+As we did not yet discuss random number generation, you may have your “random” number hardcoded in the declaration of the variable (use const int).
+Your program should now ask the user to guess the number.
+If the user guesses the number correctly, the program should show “Correct!”.
+Otherwise, the program should check whether the guessed number is lower or higher than the random number:
+
+If the guessed number is less than the random number, the program outputs ```Higher!```
+If the guessed number is greater than the random number, the program outputs ```Lower!```
+After that, the program should ask the user for his/her next guess.
+This should continue until the user guesses the correct number.
+
+- What kind of repetition structure would you use? Explain why!
+- Create the flow chart of this program.
+- Implement the code.
+
+Now we are going to extend our program in two steps:
+
+Extension 1: In the program you implemented, the user is given as many tries as needed to guess the correct number.
+Redesign the program so that the user has no more than five tries to guess the correct number.
+At the end, your program should display an appropriate message, such as ```You win!``` or ```You lose!```
+
+Extension 2: In the current program, if the guessed number is not correct, the program only tells you to guess lower or higher.
+We are now going to modify our program to give you a bit more help.
+Introduce a new variable int diff, and after each guess calculate the difference between the user’s guess and your random number.
+Suppose your random number is stored in a variable named num and the user’s guess is stored in a variable named guess, the absolute value of the difference can be calculated as:
+```diff = abs(num – guess);```
+In order for this to work, you need to include the ```cstdlib``` library in your code.
+
+Now, if diff is equal to 0, the user guessed the number correctly and wins the game (as before).
+
+If diff is not equal to 0, the program outputs a message as follows:
+- If diff ≥ 50, the program displays ```Much, much higher!``` or ```Much, much lower!```
+- If 30 ≤ diff < 50, the program displays ```Much higher!``` or ```Much lower!```
+- If 10 ≤ diff < 30, the program displays ```Higher!``` or ```Lower!```
+- If 0 < diff < 10, the program displays ```Slightly higher!``` or ```Slightly lower!```
+As in the previous version of your program, the user should get five tries to guess the number.
+
+**Goal:** Learning about control flow structures, conditional logic, and data manipulation, as a collection of all that was learned before.
