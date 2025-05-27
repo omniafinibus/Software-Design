@@ -4,22 +4,14 @@ using namespace std;
 
 int main()
 {
-	double noemer = 3;
-	double fraction, answer = 1;
+	double answer = 0;
 
 	//calculate pi
-	for (int i = 0; i <= 9999; i++)
-	{
-		fraction = 1 / noemer;
-		answer -= fraction;
-		noemer += 2;
-		fraction = 1 / noemer;
-		answer += fraction;
-		noemer += 2;
+	for (int i = 1; i <= 10000; i += 4) {
+		answer += 1.0 / i;
+		answer -= 1.0 / (i+2);
 	}
-
+	
 	//show pi
-	answer = answer * 4;
-	cout << answer << "\n";
-	system("pause");
+	cout << answer * 4 << "\n";
 }
