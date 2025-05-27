@@ -16,11 +16,10 @@ int main()
 	} while (maxVal < 10);
 
 	//calculate the sum of all integers up to that value
-	for (int add = 1; add <= maxVal; add++)
-	{	
-		cout << sum << "+" << add << "=" << sum + add << "\n";
-		sum += add;
-	}
-
-	system("pause");
+	int add = 0;
+	do{
+		cout << sum << " + " << add;
+		sum += ++add;
+		cout << " = " << sum << "\n";
+	}while(add < maxVal);
 }
