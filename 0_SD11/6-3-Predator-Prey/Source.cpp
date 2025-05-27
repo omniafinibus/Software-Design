@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -7,8 +8,7 @@ int main()
 	double preyBirth, preyDeath, predDeath, predBirth;
 	int preySize, predSize, period;
 	double finalPreySize, finalPredSize;
-	//preyn=amount of prey
-	//ask rate preybirth surplus(A)
+	//ask rate prey birth surplus(A)
 	cout << "Rate prey birth exceeding deaths?\n";
 	cin >> preyBirth;
 
@@ -20,7 +20,7 @@ int main()
 	cout << "Rate of predator deaths exceeding birth?\n";
 	cin >> predDeath;
 
-	//ask predetor death(D)
+	//ask predator death(D)
 	cout << "Rate of predator births?\n";
 	cin >> predBirth;
 
@@ -38,16 +38,13 @@ int main()
 
 	//preyn+1=preyn*(1+A-B*predn)
 	//predn+1=predn*(1-C+D*preyn)
-	for (int i = 0; i <= period; i++)
-	{
+	for (int i = 0; i <= period; i++) {
 		int oldPreySize = preySize;
-		preySize = preySize * (1 + preyBirth - preyDeath * predSize);
-		predSize = predSize * (1 - predDeath + predBirth * oldPreySize);
+		preySize = preySize + preySize*preyDeath - preySize* predSize * preyBirth;
+		predSize = predSize + predSize*predDeath - oldPreySize * predSize * predBirth;
 	}
 
 	//Show answers
 	cout << "amount of predators after " << period << " years is " << predSize << "\n";
-	cout << "amount of prey after " << period << " years is " << predSize << "\n";
-
-	system("pause");
+	cout << "amount of prey after " << period << " years is " << preySize << "\n";
 }
