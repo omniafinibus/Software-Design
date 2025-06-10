@@ -1,0 +1,15 @@
+from arduino to form
+playAr
+nextAr
+prevAr
+
+from form to arduino
+play
+next
+prev
+playlist
+S###
+loop
+
+name of song with file type to select song
+

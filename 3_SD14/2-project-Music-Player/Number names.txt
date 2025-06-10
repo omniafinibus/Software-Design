@@ -1,0 +1,17 @@
+/* SD songs */
+
+bohemian rhapsody.wav
+fucked with an anchor.wav
+hatrid mun sigra.wav
+love of my life.wav
+megalovania.wav
+radio.wav
+
+
+/* tone (arduino) songs */
+ArrVal	Name			num of notes:	Recommended bar:	time in s:	code:
+0	fur elise			75				900					13.877		nameFurElise
+1	underworld			56				1500				13.524		nameUnderWorld
+2	james bond theme	97				900					22.152		nameJamesBond
+3	mario theme			79				1000				8.616		nameMarioTheme
+4	he is a pirate 		203				750					37.212		namePirOfTheCar
