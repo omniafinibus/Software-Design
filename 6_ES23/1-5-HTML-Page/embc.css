@@ -1,0 +1,29 @@
+body {
+	background-color: #4A6DE5;
+}
+
+h1 {
+	font-family: Hack;
+	color: white;
+	text-align: center;
+}
+
+hr {
+	height:2px;
+	border-width:0;
+	background-color:white;
+}
+
+input {
+	background-color: white;
+	text-align: center;
+	padding: 3px 10px;
+}
+
+label {
+	text-indent: 30px;
+	font-family: Hack;
+	color: white;
+	font-size: 20px;
+	display: inline;
+}

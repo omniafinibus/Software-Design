@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="embc.css">
+  <title>EMBC Control Panel</title>
+</head>
+<body>
+
+<h1>Embedded Connectivity – servo and sonar control</h1>
+
+<hr>
+
+<form action="">
+  <input type="button" value="getangle">
+  <output id="getAngle">
+  <label for="getAngle">degrees</label><br>
+</form>
+
+<form action="">
+  <input type="button" value="setangle">
+  <input type="number" id="setAngle" name="setAngle" value="0" max="45" min="-45">
+  <label for="setAngle">degrees</label><br>
+</form>
+
+<form action="">
+  <input type="button" value="getdistance">
+  <output id="getDistance">
+  <label for="getDistance">cm</label><br>
+</form>
+
+<hr>
+
+</body>
+</html>
